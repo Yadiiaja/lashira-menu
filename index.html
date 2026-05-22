@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lashira Coffee - Menu & Order</title>
+<style>
+body { font-family: Arial, sans-serif; background-color: #2b2b2b; color: #fff; margin: 0; padding: 0; }
+header { background-color: #3e3e3e; text-align: center; padding: 20px; }
+h1 { margin: 0; color: #f5c518; }
+.category { background-color: #444; margin-top: 10px; border-radius: 5px; overflow: hidden; }
+.category button { width: 100%; background-color: #555; color: #f5c518; padding: 15px; border: none; text-align: left; font-size: 16px; cursor: pointer; }
+.category button:after { content: '\002B'; float: right; }
+.category button.active:after { content: "\2212"; }
+.items { display: none; padding: 10px; }
+.item { display: flex; flex-direction: column; margin-bottom: 10px; }
+.item label { margin-bottom: 5px; }
+.item input[type="text"] { padding: 5px; border-radius: 4px; border: none; }
+button#send { background-color: #f5c518; border: none; padding: 12px 20px; color: #000; cursor: pointer; border-radius: 4px; margin: 20px auto; display: block; font-size: 16px; }
+button#send:hover { background-color: #e6b700; }
+footer { text-align: center; padding: 15px; background-color: #3e3e3e; margin-top: 20px; }
+a { color: inherit; text-decoration: none; }
+</style>
+</head>
+<body>
+<header>
+<h1>Lashira Coffee & Eatery</h1>
+<p>Multi-Order HP-Friendly</p>
+</header>
+
+<!-- Semua kategori dan menu lengkap -->
+
+<!-- Mocktail Series -->
+<div class="category">
+  <button>Mocktail Series</button>
+  <div class="items">
+    <div class="item"><input type="checkbox" value="Mango Squash Lemonade - 16K"><label>Mango Squash Lemonade - 16K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Strawberry Squash Lemonade - 16K"><label>Strawberry Squash Lemonade - 16K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Lychee Squash Lemonade - 16K"><label>Lychee Squash Lemonade - 16K</label><input type="text" placeholder="Keterangan"></div>
+  </div>
+</div>
+
+<!-- Taro Series -->
+<div class="category">
+  <button>Taro Series</button>
+  <div class="items">
+    <div class="item"><input type="checkbox" value="Taro Latte - 14K"><label>Taro Latte - 14K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Taro Oreo - 15K"><label>Taro Oreo - 15K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Taro Machiato - 16K"><label>Taro Machiato - 16K</label><input type="text" placeholder="Keterangan"></div>
+  </div>
+</div>
+
+<!-- Green Tea Series -->
+<div class="category">
+  <button>Green Tea Series</button>
+  <div class="items">
+    <div class="item"><input type="checkbox" value="Green Tea Latte - 14K"><label>Green Tea Latte - 14K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Green Tea Machiato - 16K"><label>Green Tea Machiato - 16K</label><input type="text" placeholder="Keterangan"></div>
+  </div>
+</div>
+
+<!-- Choco Series -->
+<div class="category">
+  <button>Choco Series</button>
+  <div class="items">
+    <div class="item"><input type="checkbox" value="Choco Latte - 14K"><label>Choco Latte - 14K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Choco Milo - 14K"><label>Choco Milo - 14K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Choco Oreo - 15K"><label>Choco Oreo - 15K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Choco Machiato - 15K"><label>Choco Machiato - 15K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Choco Ice Cream - 16K"><label>Choco Ice Cream - 16K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Choco Vanilla/Caramel/Hazelnut/Almond - 16K"><label>Choco Vanilla/Caramel/Hazelnut/Almond - 16K</label><input type="text" placeholder="Keterangan"></div>
+  </div>
+</div>
+
+<!-- Boba Series -->
+<div class="category">
+  <button>Boba Series</button>
+  <div class="items">
+    <div class="item"><input type="checkbox" value="Boba Milk Palm Sugar - 14K"><label>Boba Milk Palm Sugar - 14K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Boba Milk Vanilla/Caramel/Hazelnut/Almond - 16K"><label>Boba Milk Vanilla/Caramel/Hazelnut/Almond - 16K</label><input type="text" placeholder="Keterangan"></div>
+  </div>
+</div>
+
+<!-- Yakult Series -->
+<div class="category">
+  <button>Yakult Series</button>
+  <div class="items">
+    <div class="item"><input type="checkbox" value="Strawberry Yakult - 17K"><label>Strawberry Yakult - 17K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Mango Yakult - 17K"><label>Mango Yakult - 17K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Lychee Yakult - 17K"><label>Lychee Yakult - 17K</label><input type="text" placeholder="Keterangan"></div>
+  </div>
+</div>
+
+<!-- Espresso Based Coffee -->
+<div class="category">
+  <button>Espresso Based</button>
+  <div class="items">
+    <div class="item"><input type="checkbox" value="Espresso - 13K"><label>Espresso - 13K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Americano Hot - 15K"><label>Americano Hot - 15K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Americano Ice - 15K"><label>Americano Ice - 15K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Sodapresso Lemonade - 17K"><label>Sodapresso Lemonade - 17K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Ice Coffee Latte - 17K"><label>Ice Coffee Latte - 17K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Asian Dolce Latte - 17K"><label>Asian Dolce Latte - 17K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Kopi Susu Gula Aren - 18K"><label>Kopi Susu Gula Aren - 18K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Kopi Susu - 19K"><label>Kopi Susu - 19K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Green Tea Fusion Espresso - 20K"><label>Green Tea Fusion Espresso - 20K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Caramel Machiato - 20K"><label>Caramel Machiato - 20K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Affogato - 20K"><label>Affogato - 20K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Butterscotch Latte - 19K"><label>Butterscotch Latte - 19K</label><input type="text" placeholder="Keterangan"></div>
+  </div>
+</div>
+
+<!-- Makanan, Cemilan & Sayur -->
+<div class="category">
+  <button>Makanan</button>
+  <div class="items">
+    <div class="item"><input type="checkbox" value="Paket A (Ayam Goreng + Nasi + Es Teh Manis) - 25K"><label>Paket A - 25K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Paket B (Ayam Bakar + Nasi + Es Teh Manis) - 25K"><label>Paket B - 25K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Ayam Goreng - 17K"><label>Ayam Goreng - 17K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Ayam Bakar - 17K"><label>Ayam Bakar - 17K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Iga Bakar - 40K"><label>Iga Bakar - 40K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Cumi Bakar/Asam Manis/Saus Padang/Saus Tiram/Tepung - 35K"><label>Cumi Varian - 35K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Chicken Katsu - 20K"><label>Chicken Katsu - 20K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Chicken Wings - 20K"><label>Chicken Wings - 20K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Nasi Goreng - 17K"><label>Nasi Goreng - 17K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Mie Goreng/Rebus - 15K"><label>Mie Goreng/Rebus - 15K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Bihun Goreng/Rebus - 15K"><label>Bihun Goreng/Rebus - 15K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Sop Iga - 30K"><label>Sop Iga - 30K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Tongseng - 35K"><label>Tongseng - 35K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Udang Asam Manis/Saus Padang/Saus Tiram/Tepung - 50K"><label>Udang Varian - 50K</label><input type="text" placeholder="Keterangan"></div>
+  </div>
+</div>
+
+<div class="category">
+  <button>Cemilan</button>
+  <div class="items">
+    <div class="item"><input type="checkbox" value="Dimsum - 15K"><label>Dimsum - 15K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Kentang Goreng - 10K"><label>Kentang Goreng - 10K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Pisang Bakar - 12K"><label>Pisang Bakar - 12K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Roti Bakar - 12K"><label>Roti Bakar - 12K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Sosis Bakar - 10K"><label>Sosis Bakar - 10K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Baso Bakar - 10K"><label>Baso Bakar - 10K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Burger/Burger Cheese - 10-13K"><label>Burger/Burger Cheese - 10-13K</label><input type="text" placeholder="Keterangan"></div>
+  </div>
+</div>
+
+<div class="category">
+  <button>Sayur</button>
+  <div class="items">
+    <div class="item"><input type="checkbox" value="Cah Kangkung - 10K"><label>Cah Kangkung - 10K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Capcay - 15K"><label>Capcay - 15K</label><input type="text" placeholder="Keterangan"></div>
+    <div class="item"><input type="checkbox" value="Oseng Toge - 10K"><label>Oseng Toge - 10K</label><input type="text" placeholder="Keterangan"></div>
+  </div>
+</div>
+
+<button id="send" onclick="sendOrder()">Kirim Pesanan</button>
+
+<footer>
+Hubungi: <a href="https://wa.me/628979322525" target="_blank">0897-9322-525</a>
+</footer>
+
+<script>
+document.querySelectorAll(".category button").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  });
+});
+
+function sendOrder(){
+  const number = '628979322525';
+  let items = [];
+  document.querySelectorAll('.item').forEach(function(item){
+    const checkbox = item.querySelector('input[type="checkbox"]');
+    const noteInput = item.querySelector('input[type="text"]');
+    if(checkbox.checked){
+      let line = checkbox.value;
+      if(noteInput.value.trim() !== '') line += ' (Keterangan: ' + noteInput.value.trim() + ')';
+      items.push(line);
+    }
+  });
+  if(items.length===0){ alert('Silakan pilih minimal 1 menu.'); return; }
+  const text = 'Halo, saya mau pesan:\n' + items.join('\n');
+  window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`, '_blank');
+}
+</script>
+</body>
+</html>
